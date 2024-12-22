@@ -1,0 +1,35 @@
+* text=auto
+
+# Document
+*.md                   text
+*.txt                  text
+
+# Config
+*.json                 text
+*.yaml                 text
+*.yml                  text
+*.xml                  text
+
+# Shell
+*.sh                   text eol=lf
+
+# style
+*.css                  text
+
+# Source
+*.html                 text
+*.js                   text
+*.ejs                  text
+*.ts                   text
+
+# Font
+*.ttf                  binary
+*.woff                 binary
+
+# Image
+*.ico                  binary
+*.jpeg                 binary
+*.jpg                  binary
+*.png                  binary
+*.webp                 binary
+*.svg                  text

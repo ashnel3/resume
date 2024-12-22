@@ -1,0 +1,20 @@
+<header class="page-header">
+  <div class="profile">
+    <img src="./assets/profile.jpg" alt="Profile Image" />
+    <h2><%= title %></h2>
+  </div>
+  <div class="info">
+    <a href="<%= contact_location_url %>">
+      <%- include('../assets/icon/call.svg') %>
+      <span><%= contact_location %></span>
+    </a>
+    <a href="<%= contact_phone_url %>">
+      <%- include('../assets/icon/call.svg') %>
+      <span><%= contact_phone %></span>
+    </a>
+    <a href="<%= contact_email_url %>+">
+      <%- include('../assets/icon/alternate_email.svg') %>
+      <span><%= contact_email %></span>
+    </a>
+  </div>
+</header>

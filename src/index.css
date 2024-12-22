@@ -1,0 +1,120 @@
+body {
+  background: radial-gradient(#e66465, #9198e5);
+}
+
+html[data-reader-view='false'] body {
+  padding: 4rem 0;
+}
+
+.page {
+  display: grid;
+  column-gap: 1rem;
+  grid-template-columns: 30% 1fr;
+  grid-template-rows: 1fr 5%;
+  background-color: #fff;
+}
+
+html[data-reader-view='true'] .page {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+html[data-reader-view='false'] .page {
+  width: 8.5in;
+  height: 11in;
+  margin: 0 auto;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-md);
+}
+
+/* === page-actions === */
+
+.page-actions {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  gap: 0.5rem;
+  bottom: 0;
+  right: 0;
+  padding: 1rem;
+}
+
+.page-actions > button {
+  padding: 0.7rem;
+  display: flex;
+  background-color: #e66465;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.page-actions > button > * {
+  width: 24px;
+  height: 24px;
+}
+
+html[data-reader-view='false'] #action-visibility > .visible_on {
+  display: none;
+}
+
+html[data-reader-view='true'] #action-visibility > .visible_off {
+  display: none;
+}
+
+/* === page-footer === */
+
+.page-footer {
+  display: flex;
+  grid-column: span 2;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background-color: #333;
+  border-bottom-left-radius: var(--radius-sm);
+  border-bottom-right-radius: var(--radius-sm);
+}
+
+/* === page-header === */
+
+.page-header {
+  min-width: 200px;
+  background-color: #ccc;
+  border-top-left-radius: var(--radius-sm);
+}
+
+.page-header > .profile {
+  padding-top: 1.5rem;
+  text-align: center;
+}
+
+.page-header > .profile > img {
+  width: 50%;
+  border-radius: 999px;
+  border: 3px solid #fff;
+}
+
+.page-header > .profile > h2 {
+  font-weight: 600;
+  margin: 0;
+}
+
+.page-header > .info {
+  margin: 1rem 1.5rem;
+  padding: 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid #999;
+  white-space: nowrap;
+  font-size: 0.8rem;
+}
+
+.page-header > .info > a {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 18px 1fr;
+  gap: 0.5rem;
+}
+
+.page-header > .info svg {
+  width: 18px;
+}

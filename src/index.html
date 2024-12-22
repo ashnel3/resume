@@ -1,0 +1,16 @@
+<!doctype html>
+<html data-reader-view="false" lang="en">
+  <%- include('./template/head.ejs') %>
+  <body>
+    <div style="display: contents">
+      <main class="page">
+        <%- include('./template/page-header.ejs') %> <%- include('./template/page-articles.ejs') %>
+        <footer class="page-footer">
+          <span>references available on request...</span>
+        </footer>
+      </main>
+      <%- include('./template/page-actions.ejs') %>
+    </div>
+  </body>
+  <script type="module" src="./index.ts"></script>
+</html>
