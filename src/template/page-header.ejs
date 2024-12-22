@@ -4,17 +4,17 @@
     <h2><%= title %></h2>
   </div>
   <div class="info">
-    <a href="<%= contact_location_url %>">
+    <a href="<%= contact.location_url %>" rel="noopener noreferrer" target="_blank">
       <%- include('../assets/icon/call.svg') %>
-      <span><%= contact_location %></span>
+      <span><%= contact.location %></span>
     </a>
-    <a href="<%= contact_phone_url %>">
+    <a href="<%= contact.phone_url %>" rel="noopener noreferrer" target="_blank">
       <%- include('../assets/icon/call.svg') %>
-      <span><%= contact_phone %></span>
+      <span><%= contact.phone %></span>
     </a>
-    <a href="<%= contact_email_url %>+">
+    <a href="<%= contact.email_url %>+" rel="noopener noreferrer" target="_blank">
       <%- include('../assets/icon/alternate_email.svg') %>
-      <span><%= contact_email %></span>
+      <span><%= contact.email %></span>
     </a>
   </div>
 </header>

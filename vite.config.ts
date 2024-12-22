@@ -1,29 +1,18 @@
-import { defineConfig, loadEnv } from 'vite'
+import { defineConfig } from 'vite'
+import { readFile } from 'node:fs/promises'
+import { resolve } from 'node:path'
 
+// plugins
 import { ViteEjsPlugin } from 'vite-plugin-ejs'
 import { viteSingleFile as ViteSingleFile } from 'vite-plugin-singlefile'
 
-// TODO: load secret.json instead of env
+// configuration
+export const EJSContext = async (path: string) => {
+  return JSON.parse((await readFile(path)).toString())
+}
 
-export const EJSContext = ({
-  VITE_TITLE: title,
-  VITE_CONTACT_EMAIL: contact_email,
-  VITE_CONTACT_EMAIL_URL: contact_email_url,
-  VITE_CONTACT_LOCATION: contact_location,
-  VITE_CONTACT_LOCATION_URL: contact_location_url,
-  VITE_CONTACT_PHONE: contact_phone,
-  VITE_CONTACT_PHONE_URL: contact_phone_url,
-}: Record<string, string>) => ({
-  title,
-  contact_email,
-  contact_email_url,
-  contact_location,
-  contact_location_url,
-  contact_phone,
-  contact_phone_url,
-})
-
-export default defineConfig(({ mode }) => {
+export default defineConfig(async () => {
+  const context = await EJSContext(resolve('./content.json'))
   return {
     root: './src',
     build: {
@@ -31,6 +20,6 @@ export default defineConfig(({ mode }) => {
       emptyOutDir: true,
       outDir: '../dist',
     },
-    plugins: [ViteSingleFile(), ViteEjsPlugin(EJSContext(loadEnv(mode, '', '')))],
+    plugins: [ViteSingleFile(), ViteEjsPlugin(context)],
   }
 })
