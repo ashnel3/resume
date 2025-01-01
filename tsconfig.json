@@ -1,8 +1,12 @@
 {
   "compilerOptions": {
+    "baseUrl": "./",
+    "rootDir": "src",
     "module": "ESNext",
     "moduleResolution": "bundler",
-    "strict": true
+    "strict": true,
+    "allowArbitraryExtensions": true,
+    "resolveJsonModule": true,
   },
   "include": ["src/**/*"]
 }

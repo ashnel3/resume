@@ -2,16 +2,18 @@
   <% for (const article of articles) { %>
   <article>
     <h2><%= article.name %></h2>
-    <p>
-      <time datetime="<%= article.date.from %>"
-        ><%= new Date(article.date.from).toLocaleDateString() %></time
-      >
-      -
-      <time datetime="<%= article.date.to %>"
-        ><%= new Date(article.date.to).toLocaleDateString() %></time
-      >
-    </p>
-    <p><%= article.description %></p>
+    <% if(typeof article.date.from !== "undefined") { %>
+      <p>
+        <time datetime="<%= article.date.from %>"
+          ><%= new Date(article.date.from).toLocaleDateString() %></time
+        >
+        -
+        <time datetime="<%= article.date.to %>"
+          ><%= article.date.to ? new Date(article.date.to).toLocaleDateString() : 'Current' %></time
+        >
+      </p>
+    <% } %>
+    <p><%= article?.description %></p>
   </article>
   <% } %>
 </section>
