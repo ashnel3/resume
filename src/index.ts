@@ -1,12 +1,13 @@
-import Actions from './lib/actions'
+import App from './app'
 
 // styles
 import './styles'
 import './index.css'
 
-// main
-const load = () => {
-  window.removeEventListener('load', load)
-  window.addEventListener('unload', Actions())
+const $load = () => {
+  const destroy = App()
+  window.removeEventListener('load', $load)
+  window.addEventListener('unload', destroy)
 }
-window.addEventListener('load', load)
+
+window.addEventListener('load', $load)

@@ -28,40 +28,6 @@ html[data-reader-view='false'] .page {
   box-shadow: var(--shadow-md);
 }
 
-/* === page-actions === */
-
-.page-actions {
-  display: flex;
-  position: fixed;
-  flex-direction: column;
-  gap: 0.5rem;
-  bottom: 0;
-  right: 0;
-  padding: 1rem;
-}
-
-.page-actions > button {
-  padding: 0.7rem;
-  display: flex;
-  background-color: #e66465;
-  border: none;
-  border-radius: 999px;
-  cursor: pointer;
-}
-
-.page-actions > button > * {
-  width: 24px;
-  height: 24px;
-}
-
-html[data-reader-view='false'] #action-visibility > .visible_on {
-  display: none;
-}
-
-html[data-reader-view='true'] #action-visibility > .visible_off {
-  display: none;
-}
-
 /* === page-footer === */
 
 .page-footer {
