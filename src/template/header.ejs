@@ -7,7 +7,7 @@
     <% if(contact.location?.url && contact?.location?.text) { %>
       <a href="<%= contact.location.url %>" rel="noopener noreferrer" target="_blank">
         <%- include('../assets/icon/globe.svg') %>
-        <span><%= contact.location.text %></span>
+        <span style="margin-bottom: 2px;"><%= contact.location.text %></span>
       </a>
     <% } %>
     <% if(contact.phone?.url && contact?.phone.text) { %>
