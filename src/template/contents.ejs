@@ -1,0 +1,17 @@
+<div class="page-contents">
+  <% for (const section of contents) {
+    switch (section.type) {
+      case 'header':
+        %>
+          <%- include('./partial/contents-header.ejs', { section }) %>
+        <%
+        break
+      case 'article':
+        %>
+          <%- include('./partial/contents-article.ejs', { section }) %>
+        <%
+        break
+      default:
+    }
+  } %>
+</div>

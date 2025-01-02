@@ -1,0 +1,17 @@
+<section class="page-contents-article">
+  <h3><%= section.title %></h3>
+  <article>
+    <% if(typeof section?.date?.from !== "undefined") { %>
+      <p class="timestamp">
+        <time datetime="<%= section.date.from %>"
+          ><%= new Date(section.date.from).toLocaleDateString() %></time
+        >
+        -
+        <time datetime="<%= section.date.to %>"
+          ><%= section.date.to ? new Date(section.date.to).toLocaleDateString() : 'now' %></time
+        >
+      </p>
+    <% } %>
+    <p><%= section.description %></p>
+  </article>
+</section>

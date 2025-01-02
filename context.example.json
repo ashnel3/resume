@@ -1,19 +1,25 @@
 {
-  "articles": [
+  "contents": [
     {
-      "name": "example",
+      "title": "Header 1",
+      "type": "header"
+    },
+    {
       "date": {
         "from": 0,
         "to": "2025-01-01"
       },
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna mauris, euismod sit amet convallis id, ultrices vitae felis."
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna mauris, euismod sit amet convallis id, ultrices vitae felis.",
+      "title": "example",
+      "type": "article"
     },
     {
-      "name": "example 1",
       "date": {
         "from": 0
       },
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna mauris, euismod sit amet convallis id, ultrices vitae felis."
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna mauris, euismod sit amet convallis id, ultrices vitae felis.",
+      "title": "example 1",
+      "type": "article"
     }
   ],
   "contact": {
