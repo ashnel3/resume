@@ -1,4 +1,13 @@
 :root {
+  --bg1: #fff;
+  --bg2: #ccc;
+  --bg3: #282828;
+  --text-900: #000;
+  --text-800: #333;
+  --text-700: #555;
+  --text-500: #777;
+  --text-200: #eee;
+  --text-100: #fff;
   --radius-sm: 3px;
   --shadow-md: 0px 0px 18px 2px rgba(0, 0, 0, 0.3);
 }
