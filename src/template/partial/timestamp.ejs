@@ -1,0 +1,9 @@
+<p class="timestamp">
+  <time datetime="<%= section.date.from %>"
+    ><%= new Date(from).toLocaleDateString() %></time
+  >
+  -
+  <time datetime="<%= section.date.to %>"
+    ><%= section.date.to ? new Date(to).toLocaleDateString() : 'now' %></time
+  >
+</p>
