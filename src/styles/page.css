@@ -19,7 +19,7 @@ html[data-reader-view='false'] .page {
   box-shadow: var(--shadow-md);
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1400px) {
   html[data-reader-view='false'] .page {
     margin: 4%;
   }

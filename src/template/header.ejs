@@ -7,19 +7,19 @@
     <% if(contact.location?.url && contact?.location?.text) { %>
       <a href="<%= contact.location.url %>" rel="noopener noreferrer" target="_blank">
         <%- include('../assets/icon/globe.svg') %>
-        <span><%= contact.location.text %></span>
+        <span class="text-overflow-ellipsis"><%= contact.location.text %></span>
       </a>
     <% } %>
     <% if(contact.phone?.url && contact?.phone.text) { %>
       <a href="<%= contact.phone.url %>" rel="noopener noreferrer" target="_blank">
         <%- include('../assets/icon/phone_in_talk.svg') %>
-        <span><%= contact.phone.text %></span>
+        <span class="text-overflow-ellipsis"><%= contact.phone.text %></span>
       </a>
     <% } %>
     <% if(contact.email?.url && contact?.email.text) { %>
       <a href="<%= contact.email.url %>+" rel="noopener noreferrer" target="_blank">
         <%- include('../assets/icon/alternate_email.svg') %>
-        <span><%= contact.email.text %></span>
+        <span class="text-overflow-ellipsis"><%= contact.email.text %></span>
       </a>
     <% } %>
   </div>
