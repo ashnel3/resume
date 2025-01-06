@@ -1,14 +1,19 @@
 <section class="page-contents">
   <% for (const article of context.contents ?? []) {
     switch (article.type) {
+      case 'article':
+        %>
+          <%- include('./partial/contents-article.ejs', { article }) %>
+        <%
+        break
       case 'header':
         %>
           <%- include('./partial/contents-header.ejs', { article }) %>
         <%
         break
-      case 'article':
+      case 'grid':
         %>
-          <%- include('./partial/contents-article.ejs', { article }) %>
+          <%- include('./partial/contents-grid.ejs', { article }) %>
         <%
         break
       default:
