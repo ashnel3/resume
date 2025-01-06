@@ -11,4 +11,16 @@
       </a>
     <% } %>
   </div>
+  <div class="page-header-certifications">
+    <h2 class="title">certifications:</h2>
+    <% for (cert of context.certifications) { %>
+      <a class="link-icon" href="<%= cert.url %>">
+        <img src="<%= cert.image %>" alt="certification badge" />
+        <span>
+          <h4 class="text-overflow-ellipsis"><%= cert.title %></h4>
+          <%- include('./partial/timestamp.ejs', { date: cert.date }) %>
+        </span>
+      </a>
+    <% } %>
+  </div>
 </header>

@@ -102,16 +102,35 @@ html[data-reader-view='false'] .page-footer {
 /* === page-header === */
 
 .page-header {
-  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  gap: 1rem;
   background-color: var(--bg-200);
+  overflow: hidden;
 }
 
 html[data-reader-view='false'] .page-header {
   border-top-left-radius: var(--radius-sm);
 }
 
-.page-header-profile {
+.page-header .title {
+  font-size: 1rem;
   margin-bottom: 1rem;
+}
+
+.page-header-certifications > .link-icon > span {
+  display: block;
+  overflow: hidden;
+}
+
+.page-header-certifications > .link-icon img {
+  min-width: 3rem;
+  width: 33%;
+  height: 33%;
+}
+
+.page-header-profile {
   text-align: center;
 }
 
