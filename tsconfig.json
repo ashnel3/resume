@@ -6,7 +6,7 @@
     "moduleResolution": "bundler",
     "strict": true,
     "allowArbitraryExtensions": true,
-    "resolveJsonModule": true,
+    "resolveJsonModule": true
   },
   "include": ["src/**/*"]
 }
