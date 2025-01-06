@@ -3,7 +3,12 @@
     <img src="./assets/profile.jpg" alt="Profile Image" />
     <h2><%= context.title %></h2>
   </div>
-  <% if (context.contact) { %>
-    <%- include('./partial/header-info.ejs', { contact: context.contact }) %>
-  <% } %>
+  <div class="page-header-info">
+    <% for ([name, obj] of Object.entries(context.contact ?? {})) { %>
+      <a class="link-icon" rel="noopener noreferrer" target="_blank" href="<%= obj.url %>">
+        <%- include(obj.image) %>
+        <span class="text-overflow-ellipsis"><%= obj.text %></span>
+      </a>
+    <% } %>
+  </div>
 </header>
