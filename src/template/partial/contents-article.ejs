@@ -1,9 +1,15 @@
-<section class="page-contents-article">
-  <h3><%= article.title %></h3>
-  <article>
-    <% if(article?.date?.from) { %>
+<article class="page-contents-article">
+  <div class="subtitle">
+    <h3><%= article.title %></h3>
+    <% if(typeof article.date?.from !== 'undefined') { %>
       <%- include('./timestamp.ejs', { date: article.date }) %>
     <% } %>
-    <p><%= article.description %></p>
-  </article>
-</section>
+  </div>
+  <% if(article.url) { %>
+    <a class="link-icon" href="<%= article.url %>" rel="noreferrer noopener" target="_blank">
+      <%- include('../../assets/icon/link.svg') %>
+      <span class="text-overflow-ellipsis"><%= article.url %></span>
+    </a>
+  <% } %>
+  <p><%= article.description %></p>
+</article>
