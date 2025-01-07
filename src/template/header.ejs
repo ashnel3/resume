@@ -1,26 +1,40 @@
-<header class="page-header">
+<header class="page-header flex-col gap-4">
   <div class="page-header-profile">
     <img src="<%= context.profile %>" alt="Profile Image" />
     <h2><%= context.title %></h2>
   </div>
-  <div class="page-header-info">
+  <section class="page-header-info flex-col gap-1">
     <% for ([name, obj] of Object.entries(context.contact ?? {})) { %>
       <a class="link-icon" rel="noopener noreferrer" target="_blank" href="<%= obj.url %>">
         <%- include(obj.image) %>
         <span class="text-overflow-ellipsis"><%= obj.text %></span>
       </a>
     <% } %>
-  </div>
-  <div class="page-header-certifications">
+  </section>
+  <section class="page-header-skills">
+    <h2 class="title">skills:</h2>
+    <div class="flex-col gap-4">
+      <% for (const skill of context.skills) { %>
+        <article>
+          <h4><%= skill.name %></h4>
+          <%- include('./partial/progress.ejs', { value: skill.value }) %>
+          <span class="tags"><%= skill.tags.join(', ') %></span>
+        </article>
+      <% } %>
+    </div>
+  </section>
+  <section class="page-header-certifications">
     <h2 class="title">certifications:</h2>
-    <% for (cert of context.certifications) { %>
-      <a class="link-icon" href="<%= cert.url %>">
-        <img src="<%= cert.image %>" alt="certification badge" />
-        <span>
-          <h4 class="text-overflow-ellipsis"><%- cert.title.replace('\n', '<br />') %></h4>
-          <%- include('./partial/timestamp.ejs', { date: cert.date }) %>
-        </span>
-      </a>
-    <% } %>
-  </div>
+    <div class="flex-col gap-4">
+      <% for (cert of context.certifications) { %>
+        <a class="link-icon" href="<%= cert.url %>">
+          <img src="<%= cert.image %>" alt="certification badge" />
+          <span>
+            <h4 class="text-overflow-ellipsis"><%- cert.title.replace('\n', '<br />') %></h4>
+            <%- include('./partial/timestamp.ejs', { date: cert.date }) %>
+          </span>
+        </a>
+      <% } %>
+    </div>
+  </section>
 </header>
