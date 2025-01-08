@@ -29,7 +29,7 @@
       <% for (cert of context.certifications) { %>
         <a class="link-icon" href="<%= cert.url %>">
           <img src="<%= cert.image %>" alt="certification badge" />
-          <span>
+          <span class="overflow-hidden">
             <h4 class="text-overflow-ellipsis"><%- cert.title.replace('\n', '<br />') %></h4>
             <%- include('./partial/timestamp.ejs', { date: cert.date }) %>
           </span>

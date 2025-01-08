@@ -7,6 +7,7 @@
   --bg-100: #fff;
   --bg-200: #e4e4e7;
   --bg-300: #d4d4d8;
+  --bg-400: #a1a1aa;
   --bg-900: #374151;
   --bg-alternate: #fb7185;
   --bg-tertiary: #a78bfa;
@@ -19,6 +20,11 @@
   --link-active: #818cf8;
   --link-default: #4f46e5;
   --radius-sm: 3px;
+  --radius-full: 999px;
   --shadow-sm: 0px 0px 8px 1px rgba(0, 0, 0, 0.3);
   --shadow-md: 0px 0px 18px 2px rgba(0, 0, 0, 0.3);
+  --text-xs: 0.8rem;
+  --text-sm: 1rem;
+  --text-md: 1.25rem;
+  --text-lg: 1.5rem;
 }

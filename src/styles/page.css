@@ -23,3 +23,22 @@ html[data-reader-view='false'] .page {
     margin: 4%;
   }
 }
+
+.progress {
+  height: 1rem;
+  margin: 0.33rem 0;
+  background-color: var(--bg-300);
+  border-radius: var(--radius-sm);
+  border: 1px solid #fff;
+}
+
+html[data-reader-view='false'] .progress {
+  box-shadow: var(--shadow-sm);
+}
+
+.progress > .progress-bar {
+  height: 100%;
+  width: var(--progress-value);
+  background-color: var(--bg-tertiary);
+  border-radius: var(--radius-sm);
+}
