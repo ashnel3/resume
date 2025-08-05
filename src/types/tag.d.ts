@@ -8,6 +8,12 @@ export interface TagAnchor {
   text: string
 }
 
+export interface TagIcon {
+  icon: string
+  collection: string
+  attributes?: Record<string, string>
+}
+
 export interface TagAnchorImage extends TagImage {
   href: string
 }

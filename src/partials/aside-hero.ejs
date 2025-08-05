@@ -1,0 +1,19 @@
+<!-- aside hero image -->
+<% if (hero.image.src && hero.image.alt) { %>
+  <div>
+    <span>&lt;img&gt;</span>
+    <div class="my-2 border-l border-dashed dark:border-white">
+      <img class="max-w-2/3 mx-auto select-none rounded-sm shadow-2xl" src="<%= hero.image.src %>" alt="<%= hero.image.alt %>" />
+    </div>
+    <span>&lt;/img&gt;</span>
+  </div>
+<% } %>
+<!-- aside hero links -->
+<div class="text-sm rounded-sm bg-zinc-950/30">
+  <% for (const link of Object.values(hero.links)) { %>
+    <a class="flex gap-2 p-1 items-center rounded-sm hover:underline hover:bg-zinc-950" rel="noopener,noreferrer" href="<%= link.href %>" target="_blank">
+      <%- helpers.icon(link.collection, link.icon, link.attributes) %>
+      <span><%= link.text %></span>
+    </a>
+  <% } %>
+</div>

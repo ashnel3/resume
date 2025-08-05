@@ -1,4 +1,4 @@
-import type { TagAnchor, TagImage, TagLink, TagMeta } from './tag'
+import type { TagAnchor, TagIcon, TagImage, TagLink, TagMeta } from './tag'
 
 export interface UserContextHead {
   link?: TagLink[]
@@ -10,9 +10,7 @@ export interface UserContextAside {
   location?: TagAnchor
   hero?: {
     image?: TagImage
-    email?: TagAnchor
-    phone?: TagAnchor
-    location?: TagAnchor
+    links?: Array<TagIcon & TagAnchor>
   }
 }
 
