@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <%- include('./partials/head.ejs', { head: context?.head ?? {} }) %>
+  </head>
+  <body>
+    <div class="contents"><%- include('./partials/main.ejs') %></div>
+    <script src="./index.ts" type="module"></script>
+  </body>
+</html>

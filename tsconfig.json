@@ -1,0 +1,30 @@
+{
+  // Visit https://aka.ms/tsconfig to read more about this file
+  "compilerOptions": {
+    "composite": true,
+    "incremental": true,
+    "tsBuildInfoFile": "node_modules/.cache/tsconfig.app.tsbuildinfo",
+
+    "rootDir": "./",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "target": "esnext",
+    "paths": {
+      "$styles": ["./src/styles"],
+      "$types/*": ["./src/types/*"],
+      "$types": ["./src/types/index.d.ts"]
+    },
+    "noEmit": true,
+
+    "strict": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "exactOptionalPropertyTypes": true,
+    "noUnusedLocals": true,
+    "noUncheckedIndexedAccess": true,
+    "noUncheckedSideEffectImports": true,
+    "verbatimModuleSyntax": true,
+    "skipDefaultLibCheck": true
+  },
+  "include": ["**/*"]
+}

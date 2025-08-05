@@ -1,0 +1,10 @@
+<main class="grid h-screen w-full grid-cols-[25%_1fr] bg-zinc-50 dark:bg-zinc-800 dark:text-white">
+  <!-- main aside -->
+  <%- include('./aside.ejs', { aside: context.aside ?? {} }) %>
+  <!-- main markdown pages -->
+  <div class="relative">
+    <% for (const path of context.pages ?? []) { %>
+      <%- include('./page.ejs', { path }) %>
+    <% } %>
+  </div>
+</main>

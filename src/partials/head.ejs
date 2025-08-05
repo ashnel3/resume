@@ -1,0 +1,13 @@
+<meta charset="UTF-8" />
+<meta name="generator" content="EJS v<%= EJS_VERSION %>" />
+<meta name="robots" content="noindex,nofollow" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title><%= head.title ?? 'Resume Template' %></title>
+<!-- user context meta -->
+<% for (const meta of head.meta ?? []) { %>
+  <meta name="<%= meta.name %>" content="<%= meta.content %>" />
+<% } %>
+<!-- user context links -->
+<% for (const link of head.link ?? []) { %>
+  <link rel="<%= link.rel %>" href="<%= link.href %>" />
+<% } %>

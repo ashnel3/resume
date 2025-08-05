@@ -1,3 +1,15 @@
+# Editor Files
+/.vscode
+/.idea
+
+# Generated
+/schema
+
+# Private Files
+src/context/*
+
+!.gitkeep
+
 # Logs
 logs
 *.log

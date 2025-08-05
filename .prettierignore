@@ -1,0 +1,12 @@
+# Generated
+/schema
+
+# Miscellaneous
+/static
+
+# Lock Files
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+bun.lock
+bun.lockb
