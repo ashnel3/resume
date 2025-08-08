@@ -1,6 +1,6 @@
 <!-- aside hero image -->
 <% if (hero.image.src && hero.image.alt) { %>
-  <div>
+  <div class="text-sm">
     <span>&lt;img&gt;</span>
     <div class="my-2 border-l border-dashed dark:border-white">
       <img class="max-w-2/3 mx-auto select-none rounded-sm shadow-2xl" src="<%= hero.image.src %>" alt="<%= hero.image.alt %>" />
@@ -9,11 +9,13 @@
   </div>
 <% } %>
 <!-- aside hero links -->
-<div class="text-sm rounded-sm bg-zinc-950/30">
-  <% for (const link of Object.values(hero.links)) { %>
-    <a class="flex gap-2 p-1 items-center rounded-sm hover:underline hover:bg-zinc-950" rel="noopener,noreferrer" href="<%= link.href %>" target="_blank">
-      <%- helpers.icon(link.collection, link.icon, link.attributes) %>
-      <span><%= link.text %></span>
-    </a>
-  <% } %>
-</div>
+<% if (hero.links.length > 0) { %>
+  <div class="text-xs rounded-sm shadow-2xl bg-zinc-950/30 [&>a]:grid [&>a]:grid-cols-[24px_1fr] [&>a]:gap-1 [&>a]:p-2 [&>a]:items-center">
+    <% for (const link of Object.values(hero.links)) { %>
+      <a class="rounded-sm hover:underline hover:bg-zinc-900 transition-colors" rel="noopener,noreferrer" href="<%= link.href %>" target="_blank">
+        <%- helpers.icon(link.collection, link.icon, link.attributes) %>
+        <span class="whitespace-nowrap w-[calc(100%)] text-ellipsis overflow-hidden"><%= link.text %></span>
+      </a>
+    <% } %>
+  </div>
+<% } %>
