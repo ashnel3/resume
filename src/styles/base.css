@@ -1,6 +1,13 @@
 @layer base {
+  @media print {
+    body {
+      @apply bg-white;
+      background-image: none !important;
+    }
+  }
+
   body {
-    background:
+    background-image:
       radial-gradient(ellipse at top, var(--color-red-400), transparent),
       radial-gradient(ellipse at bottom, var(--color-lime-500), transparent);
   }

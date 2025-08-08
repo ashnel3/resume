@@ -9,12 +9,14 @@
 
   /* === main === */
 
-  [data-print='true'] .main {
-    @apply gap-0 p-0;
-  }
+  @media print {
+    .main {
+      @apply gap-0! p-0!;
+    }
 
-  [data-print='true'] .main-page {
-    @apply mx-0 w-full rounded-none shadow-none;
+    .main-page {
+      @apply mx-0! w-full! rounded-none! bg-transparent! shadow-none!;
+    }
   }
 
   .main {
