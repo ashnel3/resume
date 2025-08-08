@@ -7,6 +7,26 @@
     @apply flex items-center justify-center rounded-sm text-lime-900 transition-colors hover:bg-lime-200/50;
   }
 
+  /* === main === */
+
+  [data-print='true'] .main {
+    @apply gap-0 p-0;
+  }
+
+  [data-print='true'] .main-page {
+    @apply mx-0 w-full rounded-none shadow-none;
+  }
+
+  .main {
+    @apply relative flex min-h-screen w-full flex-col gap-8 overflow-auto p-8;
+  }
+
+  .main-page {
+    @apply mx-auto grid aspect-[8.5/11] w-3xl min-w-5/6 grid-cols-[25%_1fr] rounded-md bg-zinc-50 shadow-2xl dark:bg-zinc-800 dark:text-white;
+  }
+
+  /* === markdown === */
+
   [data-aside='false'] .markdown {
     @apply col-span-2 px-16;
   }
