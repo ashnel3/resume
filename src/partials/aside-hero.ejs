@@ -1,18 +1,18 @@
 <!-- aside hero image -->
 <% if (hero.image.src && hero.image.alt) { %>
-  <div class="text-sm">
+  <div class="text-sm text-red-400 dark:text-red-300">
     <span>&lt;img&gt;</span>
-    <div class="my-2 border-l border-dashed dark:border-white">
-      <img class="max-w-2/3 mx-auto select-none rounded-sm shadow-2xl" src="<%= hero.image.src %>" alt="<%= hero.image.alt %>" />
+    <div class="p-3 border-l border-dashed border-zinc-800 dark:border-zinc-300">
+      <img class="select-none rounded-sm shadow-2xl" src="<%= hero.image.src %>" alt="<%= hero.image.alt %>" />
     </div>
     <span>&lt;/img&gt;</span>
   </div>
 <% } %>
 <!-- aside hero links -->
 <% if (hero.links && hero.links.length > 0) { %>
-  <div class="text-xs rounded-sm shadow-2xl bg-zinc-950/30 [&>a]:grid [&>a]:grid-cols-[24px_1fr] [&>a]:gap-1 [&>a]:p-2 [&>a]:items-center">
+  <div class="link-grid [&>a]:grid [&>a]:grid-cols-[24px_1fr] [&>a]:gap-2 [&>a]:items-center">
     <% for (const link of Object.values(hero.links)) { %>
-      <a class="rounded-sm hover:underline hover:bg-zinc-900 transition-colors" rel="noopener,noreferrer" href="<%= link.href %>" target="_blank">
+      <a class="p-2 text-xs hover:underline" rel="noopener,noreferrer" href="<%= link.href %>" target="_blank">
         <%- helpers.icon(link.collection, link.icon, link.attributes) %>
         <span class="whitespace-nowrap w-[calc(100%)] text-ellipsis overflow-hidden"><%= link.text %></span>
       </a>
@@ -21,9 +21,9 @@
 <% } %>
 <!-- aside hero social icons -->
 <% if (hero.icons && hero.icons.length > 0) { %>
-  <div class="grid grid-cols-[repeat(auto-fit,minmax(48px,1fr))] auto-rows-[minmax(48px,1fr)] rounded-sm shadow-2xl bg-zinc-950/30">
+  <div class="link-grid grid-cols-[repeat(auto-fit,minmax(48px,1fr))] auto-rows-[minmax(48px,1fr)]">
     <% for (const link of Object.values(hero.icons)) { %>
-      <a class="flex items-center justify-center rounded-sm transition-colors hover:bg-zinc-900" rel="noopener,noreferrer" href="<%= link.href %>" target="_blank">
+      <a rel="noopener,noreferrer" href="<%= link.href %>" target="_blank">
         <%- helpers.icon(link.collection, link.icon, link.attributes) %>
       </a>
     <% } %>

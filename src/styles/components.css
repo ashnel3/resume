@@ -1,0 +1,9 @@
+@layer components {
+  .link-grid {
+    @apply grid rounded-sm bg-lime-300 shadow-2xl dark:bg-lime-400;
+  }
+
+  .link-grid > a {
+    @apply flex items-center justify-center rounded-sm text-lime-900 transition-colors hover:bg-lime-200/50;
+  }
+}
