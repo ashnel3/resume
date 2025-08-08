@@ -9,12 +9,22 @@
   </div>
 <% } %>
 <!-- aside hero links -->
-<% if (hero.links.length > 0) { %>
+<% if (hero.links && hero.links.length > 0) { %>
   <div class="text-xs rounded-sm shadow-2xl bg-zinc-950/30 [&>a]:grid [&>a]:grid-cols-[24px_1fr] [&>a]:gap-1 [&>a]:p-2 [&>a]:items-center">
     <% for (const link of Object.values(hero.links)) { %>
       <a class="rounded-sm hover:underline hover:bg-zinc-900 transition-colors" rel="noopener,noreferrer" href="<%= link.href %>" target="_blank">
         <%- helpers.icon(link.collection, link.icon, link.attributes) %>
         <span class="whitespace-nowrap w-[calc(100%)] text-ellipsis overflow-hidden"><%= link.text %></span>
+      </a>
+    <% } %>
+  </div>
+<% } %>
+<!-- aside hero social icons -->
+<% if (hero.icons && hero.icons.length > 0) { %>
+  <div class="grid grid-cols-[repeat(auto-fit,minmax(48px,1fr))] auto-rows-[minmax(48px,1fr)] rounded-sm shadow-2xl bg-zinc-950/30">
+    <% for (const link of Object.values(hero.icons)) { %>
+      <a class="flex items-center justify-center rounded-sm transition-colors hover:bg-zinc-900" rel="noopener,noreferrer" href="<%= link.href %>" target="_blank">
+        <%- helpers.icon(link.collection, link.icon, link.attributes) %>
       </a>
     <% } %>
   </div>

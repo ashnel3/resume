@@ -7,9 +7,9 @@ export interface UserContextHead {
 }
 
 export interface UserContextAside {
-  location?: TagAnchor
   hero?: {
     image?: TagImage
+    icons?: Array<TagIcon & Omit<TagAnchor, 'text'>>
     links?: Array<TagIcon & TagAnchor>
   }
 }
@@ -17,7 +17,6 @@ export interface UserContextAside {
 export interface UserContext {
   aside?: UserContextAside
   head?: UserContextHead
-  social?: Record<string, string>
   pages?: string[]
 }
 

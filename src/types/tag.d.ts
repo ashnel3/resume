@@ -11,7 +11,7 @@ export interface TagAnchor {
 export interface TagIcon {
   icon: string
   collection: string
-  attributes?: Record<string, string>
+  attributes?: Record<string, string | undefined>
 }
 
 export interface TagAnchorImage extends TagImage {
