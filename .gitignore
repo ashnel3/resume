@@ -10,6 +10,9 @@ src/context/*
 
 !.gitkeep
 
+# OS Files
+.DS_Store
+
 # Logs
 logs
 *.log
