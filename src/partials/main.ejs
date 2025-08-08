@@ -3,10 +3,6 @@
     <!-- main aside -->
     <%- include('./aside.ejs', { aside: context.aside ?? {} }) %>
     <!-- main markdown pages -->
-    <div class="relative p-4">
-      <% for (const path of context.pages ?? []) { %>
-        <%- include('./page.ejs', { path }) %>
-      <% } %>
-    </div>
+    <%- include('./pages.ejs') %>
   </div>
 </main>
