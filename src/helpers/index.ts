@@ -1,2 +1,2 @@
 export { icon } from './icon'
-export { renderMarkdown } from './markdown'
+export { loopMarkdown } from './markdown'

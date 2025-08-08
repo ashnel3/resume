@@ -1,8 +1,14 @@
-<main class="relative w-full min-h-screen p-8 overflow-auto">
-  <div class="grid w-3xl min-w-2/3 mx-auto grid-cols-[25%_1fr] aspect-[8.5/11] rounded-md shadow-2xl bg-zinc-50 dark:bg-zinc-800 dark:text-white">
-    <!-- main aside -->
-    <%- include('./aside.ejs', { aside: context.aside ?? {} }) %>
-    <!-- main markdown pages -->
-    <%- include('./pages.ejs') %>
-  </div>
+<main class="relative flex flex-col w-full min-h-screen p-8 gap-8 overflow-auto">
+  <% for (const { data, template } of helpers.loopMarkdown(context.pages ?? [])) { %>
+    <div data-aside="<%= data.aside %>" class="grid w-3xl min-w-5/6 mx-auto grid-cols-[25%_1fr] aspect-[8.5/11] rounded-md shadow-2xl bg-zinc-50 dark:bg-zinc-800 dark:text-white">
+      <!-- main aside -->
+      <% if (data.aside) { %>
+        <%- include('./aside.ejs', { aside: context.aside ?? {} }) %>
+      <% } %>
+      <!-- main markdown pages -->
+      <section class="markdown">
+        <%- template %>
+      </section>
+    </div>
+  <% } %>
 </main>

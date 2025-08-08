@@ -6,4 +6,64 @@
   .link-grid > a {
     @apply flex items-center justify-center rounded-sm text-lime-900 transition-colors hover:bg-lime-200/50;
   }
+
+  [data-aside='false'] .markdown {
+    @apply col-span-2 px-16;
+  }
+
+  .markdown {
+    @apply py-8.5 pr-4;
+  }
+
+  .markdown a {
+    @apply text-lime-400 hover:underline dark:text-lime-300;
+  }
+
+  .markdown > blockquote {
+    @apply my-2 rounded-sm bg-lime-300/40 p-2;
+  }
+
+  .markdown > h1 {
+    @apply my-2 text-3xl;
+  }
+
+  .markdown > h2 {
+    @apply my-2 text-2xl;
+  }
+
+  .markdown > h3 {
+    @apply my-2 text-xl;
+  }
+
+  .markdown > h5 {
+    @apply my-2 text-sm;
+  }
+
+  .markdown > h6 {
+    @apply my-2 text-sm text-zinc-400;
+  }
+
+  .markdown > p {
+    @apply my-2;
+  }
+
+  .markdown > pre {
+    @apply my-2 rounded-sm bg-zinc-200 p-3 dark:bg-zinc-900;
+  }
+
+  .markdown > ul {
+    @apply my-2 list-disc pl-4;
+  }
+
+  .markdown > ul ul {
+    @apply list-disc pl-8;
+  }
+
+  .markdown em {
+    @apply text-zinc-400;
+  }
+
+  .markdown del {
+    @apply text-zinc-400;
+  }
 }

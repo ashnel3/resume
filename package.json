@@ -31,6 +31,7 @@
     "@iconify/json": "^2.2.366",
     "@iconify/types": "^2.0.0",
     "@iconify/utils": "^2.3.0",
+    "gray-matter": "^4.0.3",
     "marked": "^16.1.2"
   },
   "devDependencies": {
